@@ -113,10 +113,14 @@ position: relative;
     margin-left: 5px;
 }
 
+.icon1 {
+    z-index: 1;
+}
+
 .ratingdiv, .pricediv{
     font-size: 22px;
     width: 100%;
-    display: flex;
+    display: flex !important;
     margin-left: 5px;
     border: none !important;
     margin-bottom: 0px !important;
