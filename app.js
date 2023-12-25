@@ -244,9 +244,11 @@ icons.forEach((icon) => {
     if (icon.dataset.state === "black") {
       icon.src = "./image/heartred.png";
       icon.dataset.state = "red";
+      console.log("qirmizi oldu")
     } else if (icon.dataset.state === "red") {
       icon.src = "./image/heartblack.png";
       icon.dataset.state = "black";
+      console.log("qara oldu")
     }
   });
 });
