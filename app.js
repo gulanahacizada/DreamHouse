@@ -31,39 +31,22 @@ search.addEventListener("change", () => {
 
 
 /////catagory filtr
-let massiv=[]
+let massiv = []
 
 
 let all = document.querySelectorAll(".all")
 let category = document.querySelectorAll(".category")
-// all.forEach((button) => {
-//   button.addEventListener("click", () => {
-//     all.forEach((otherButton) => {
-//       otherButton.classList.remove("clicked");
-//     });
-
-//     button.classList.add("clicked");
-
-//     massiv = [];
-//     category.forEach((c) => {
-//       if (button.innerText == c.innerText || button.innerText == "All") {
-//         c.parentElement.style.display = "inline";
-//       } 
-//       else {
-//         c.parentElement.style.display = "none";
-//       }
-//     });
-//   });
-// });
-
-
-/////
 let inps = document.querySelectorAll(".inp")
 let max = document.querySelector(".max")
 let min = document.querySelector(".min")
 let price = document.querySelectorAll(".price")
 let spans = document.querySelectorAll("span")
 let rating = document.querySelectorAll(".rating")
+let one = document.querySelector(".one")
+let two = document.querySelector(".two")
+let three = document.querySelector(".three")
+let four = document.querySelector(".four")
+let five = document.querySelector(".five")
 all.forEach((button) => {
   button.addEventListener("click", () => {
     all.forEach((otherButton) => {
@@ -72,111 +55,135 @@ all.forEach((button) => {
 
     button.classList.add("clicked");
 
-   
+
     category.forEach((c) => {
       if (button.innerText == c.innerText || button.innerText == "All") {
         c.parentElement.style.display = "inline";
         let p = c.nextElementSibling.nextElementSibling.firstElementChild.innerText.replace("$", "");
-        let price=c.nextElementSibling.nextElementSibling.firstElementChild
+        let price = c.nextElementSibling.nextElementSibling.firstElementChild
+
+        /// price filtr
+
         inps.forEach((inp) => {
           inp.addEventListener("change", (e) => {
             let a = e.target.nextElementSibling.innerText;
             let b = a.split("-")
             min.value = b[0]
             max.value = b[1]
-              
-              if ((parseFloat(price.innerText.replace("$", "")) > parseFloat(b[0])) && (parseFloat(price.innerText.replace("$", "")) < parseFloat(b[1]))) {
-                c.parentElement.style.display = "inline"
-                spans.forEach((span) => {
-                    span.addEventListener("click", () => {
-                      r=price.parentElement.previousElementSibling.firstElementChild.innerText.substring(7, rating.length)
-                      
-                      if ((span.classList.contains("rating-select")) == false) {
-                        span.classList.add("rating-select")
-          
-                          if ((span.classList.contains("rating-select")) && (span.classList.contains("one")) && (r == "1")) {
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("rating-select")) && (span.classList.contains("two")) && (r == "2")) {
-                           
-                            span.previousElementSibling.classList.add("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("rating-select")) && (span.classList.contains("three")) && (r == "3")) {
-                            
-                            span.previousElementSibling.classList.add("rating-select")
-                            span.previousElementSibling.previousElementSibling.classList.add("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("rating-select")) && (span.classList.contains("four")) && (r == "4")) {
-                            span.previousElementSibling.classList.add("rating-select")
-                            span.previousElementSibling.previousElementSibling.classList.add("rating-select")
-                            span.previousElementSibling.previousElementSibling.previousElementSibling.classList.add("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("rating-select")) && (span.classList.contains("five")) && (r == "5")) {
-                            span.previousElementSibling.classList.add("rating-select")
-                            span.previousElementSibling.previousElementSibling.classList.add("rating-select")
-                            span.previousElementSibling.previousElementSibling.previousElementSibling.classList.add("rating-select")
-                            span.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.classList.add("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else {
-                            c.parentElement.style.display = "none"
-                          }
-                        
-                      } else {
-                        
-                          if ((span.classList.contains("one")) && (r == "1")) {
-                            span.nextElementSibling.classList.remove("rating-select")
-                            span.nextElementSibling.nextElementSibling.classList.remove("rating-select")
-                            span.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("rating-select")
-                            span.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("two")) && (r == "2")) {
-                            span.nextElementSibling.classList.remove("rating-select")
-                            span.nextElementSibling.nextElementSibling.classList.remove("rating-select")
-                            span.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("three")) && (r == "3")) {
-                            span.nextElementSibling.classList.remove("rating-select")
-                            span.nextElementSibling.nextElementSibling.classList.remove("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("four")) && (r == "4")) {
-                            span.nextElementSibling.classList.remove("rating-select")
-                            c.parentElement.style.display = "inline"
-                          } else if ((span.classList.contains("five")) && (r == "5")) {
-                            c.parentElement.style.display = "inline"
-                          } else {
-                            c.parentElement.style.display = "none"
-                          }
-                  
-                      }
-                    })
-                  })
+
+            if ((parseFloat(price.innerText.replace("$", "")) > parseFloat(b[0])) && (parseFloat(price.innerText.replace("$", "")) < parseFloat(b[1]))) {
+              c.parentElement.style.display = "inline"
+      ///rating filtr
+              spans.forEach((span) => {
+                span.addEventListener("click", () => {
+                  r = price.parentElement.previousElementSibling.firstElementChild.innerText.substring(7, rating.length)
+
+                  if ((span.classList.contains("rating-select")) == false) {
+                    span.classList.add("rating-select")
+                    if ((span.classList.contains("rating-select")) && (span.classList.contains("two"))) {
+                      one.classList.add("rating-select")
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("three"))) {
+                      one.classList.add("rating-select")
+                      two.classList.add("rating-select")
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("four"))) {
+                      one.classList.add("rating-select")
+                      two.classList.add("rating-select")
+                      three.classList.add("rating-select")
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("five"))) {
+                      one.classList.add("rating-select")
+                      two.classList.add("rating-select")
+                      three.classList.add("rating-select")
+                      four.classList.add("rating-select")
+                    }
 
 
-          
-              } else {
-                c.parentElement.style.display = "none"
-              
-              }})      
+
+
+                    if ((span.classList.contains("rating-select")) && (span.classList.contains("one")) && (r == "1")) {
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("two")) && (r == "2")) {
+
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("three")) && (r == "3")) {
+
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("four")) && (r == "4")) {
+
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("rating-select")) && (span.classList.contains("five")) && (r == "5")) {
+
+                      c.parentElement.style.display = "inline"
+                    } else {
+                      c.parentElement.style.display = "none"
+                    }
+
+                  } else {
+                    if (span.classList.contains("one")) {
+                      two.classList.remove("rating-select")
+                      three.classList.remove("rating-select")
+                      four.classList.remove("rating-select")
+                      five.classList.remove("rating-select")
+                    } else if (span.classList.contains("two")) {
+                      five.classList.remove("rating-select")
+                      two.classList.remove("rating-select")
+                      three.classList.remove("rating-select")
+                      four.classList.remove("rating-select")
+                    } else if (span.classList.contains("three")) {
+                      four.classList.remove("rating-select")
+                      five.classList.remove("rating-select")
+                    } else if (span.classList.contains("four")) {
+                      five.classList.remove("rating-select")
+
+                    }
+
+                    if ((span.classList.contains("one")) && (r == "1")) {
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("two")) && (r == "2")) {
+                      span.nextElementSibling.classList.remove("rating-select")
+                      span.nextElementSibling.nextElementSibling.classList.remove("rating-select")
+                      span.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("rating-select")
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("three")) && (r == "3")) {
+                      span.nextElementSibling.classList.remove("rating-select")
+                      span.nextElementSibling.nextElementSibling.classList.remove("rating-select")
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("four")) && (r == "4")) {
+                      span.nextElementSibling.classList.remove("rating-select")
+                      c.parentElement.style.display = "inline"
+                    } else if ((span.classList.contains("five")) && (r == "5")) {
+                      c.parentElement.style.display = "inline"
+                    } else {
+                      c.parentElement.style.display = "none"
+                    }
+
+                  }
+                })
+              })
+            } else {
+              c.parentElement.style.display = "none"
+
+            }
+          })
         })
         min.addEventListener("change", () => {
           max.addEventListener("change", () => {
-          
-              if ((parseFloat(p) > parseFloat(min.value)) && (parseFloat(p) < parseFloat(max.value))) {
-                c.parentElement.style.display = "inline"
-                
-              } else {
-                c.parentElement.style.display = "none"
-              }
-           
+            if ((parseFloat(price.innerText.replace("$", "")) > parseFloat(b[0])) && (parseFloat(price.innerText.replace("$", "")) < parseFloat(b[1]))) {
+              c.parentElement.style.display = "inline"
+            }
+            else {
+              c.parentElement.style.display = "none"
+
+            }
+
           })
         })
-       
 
-      } 
+      }
       else {
         c.parentElement.style.display = "none";
       }
     });
-   
+
   });
 });
 
@@ -216,8 +223,8 @@ function filterProducts() {
 
 //// clear button
 let clear = document.querySelector(".clear")
-let pricediv=document.querySelectorAll(".pricediv")
-let ratingdiv=document.querySelectorAll(".ratingdiv")
+let pricediv = document.querySelectorAll(".pricediv")
+let ratingdiv = document.querySelectorAll(".ratingdiv")
 
 clear.addEventListener("click", () => {
   spans.forEach((span) => {
@@ -232,19 +239,19 @@ clear.addEventListener("click", () => {
     div.style.display = "inline"
   })
   pricediv.forEach((div) => {
-    div.style.display="flex"
+    div.style.display = "flex"
   })
   ratingdiv.forEach((div) => {
-    div.style.display="flex"
-    div.style.marginLeft="5px"
+    div.style.display = "flex"
+    div.style.marginLeft = "5px"
   })
   count1.checked = false;
   count2.checked = false;
   all.forEach((all) => {
     all.classList.remove("clicked");
   });
-  search.value=""
-  
+  search.value = ""
+
 })
 
 
@@ -252,7 +259,7 @@ clear.addEventListener("click", () => {
 ////favori
 let icons = document.querySelectorAll(".icon1");
 let back = document.querySelector(".back")
- 
+
 icons.forEach((icon) => {
   icon.addEventListener("click", (e) => {
     e.preventDefault()
@@ -260,11 +267,11 @@ icons.forEach((icon) => {
     if (icon.dataset.state === "black") {
       icon.src = "./image/heartred.png";
       icon.dataset.state = "red";
-      console.log("qirmizi oldu")
+     
     } else if (icon.dataset.state === "red") {
       icon.src = "./image/heartblack.png";
       icon.dataset.state = "black";
-      console.log("qara oldu")
+     
     }
   });
 });
@@ -304,5 +311,4 @@ more.forEach((m) => {
   })
 })
 let b = localStorage.getItem("name")
-console.log(b)
-// localStorage.clear()
+
