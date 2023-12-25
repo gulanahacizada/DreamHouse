@@ -1,0 +1,477 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.section1{
+  display: flex;
+}
+img{
+ width: 600px;
+ margin-left: 34px;
+ margin-top: 40px;
+}
+.div1{
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 50%;
+}
+.div2{
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 40%;
+}
+
+h1{
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.rating{
+  margin-bottom: 10px;
+}
+.word{
+  color: grey;
+  margin-left: 15px;
+}
+.card{
+  width: 545px;
+  height: 50px;
+  font-size: 20px;
+  color: white;
+  background-color: #b58269;
+  border: none;
+  margin: 20px auto;
+}
+.safe{
+  font-size: 23px;
+  margin-top: 5px;
+  margin-left: 90px;
+}
+.visa{
+  width: 415px;
+}
+.car img{
+  width: 100px;
+}
+.car{
+  display: flex;
+  background-color: #f3f3f3;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
+.car p{
+  margin-top: 55px;
+  margin-left: 30px;
+  font-size: 20px;
+}
+.tabs{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.tabs button{
+  border: none;
+  background-color: white;
+  font-size: 20px;
+}
+.tabs button:hover{
+  background-color: #b58269;
+  color: white;
+}
+hr{
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.info1, .info2, .info3, .info4{
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 30px;
+  height: 200px;
+  background-color: #fafafa;
+  padding-left: 20px;
+}
+.info2, .info3, .info4{
+  display: none;
+}
+.section2{
+  margin-left: 20px;
+}
+.write{
+  width: 300px;
+  height: 60px;
+  font-size: 20px;
+  color: white;
+  background-color: #3a5041;
+  border: none;
+}
+.need{
+  text-align: center;
+  padding-top: 20px;
+}
+.one, .two, .three, .four, .five{
+  display: inline !important;
+  font-size: 50px;
+  margin-top: 10px;
+}
+.add{
+  width: 98%;
+  min-height: 60px;
+  height: 60%;
+  border: 2px solid grey;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  display: none;
+}
+.send ,.need, .yes{
+  display: none;
+  margin-bottom: 10px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.review-star{
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reviews div{
+  border: 2px solid grey;
+  border-radius: 20px;
+  height: 60%;
+  width: 98%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 20px;
+}
+h2{
+  font-size: 40px;
+  margin: 20px 0px;
+}
+.user{
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+.preprice{
+    color: grey;
+    text-decoration: line-through;
+}
+span{
+    font-size: 22px;
+    width: 100%;
+    display: flex;
+    margin-left: 5px;
+}
+.point{
+  font-size: 22px;
+  width: 100%;
+  display: flex;
+  margin-left: 5px;
+  border: none !important;
+  margin: 0px !important;
+}
+.point h6{
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+.star{
+    font-size: 20px;
+  margin-left: 15px;
+
+}
+* {box-sizing:border-box}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 10px;
+  color:  #3a5041;
+  font-weight: bold;
+  font-size: 30px;
+  /* transition: 0.6s ease; */
+  border-radius: 0 3px 3px 0;
+  /* user-select: none; */
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgb(189, 186, 186);
+
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.left{
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 450px;
+ 
+  background-color: #fafafa;
+  text-align: center;
+}
+.left p{
+ 
+  font-size: 23px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.rating-select{
+  color: gold !important;
+ }
+ @media only screen and (min-width: 300px) and (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+ 
+  header {
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+      height: 180px;
+      padding-right: 20px;
+      padding-left: 20px;
+      
+  }
+  header div{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      
+  }
+  header p{
+  font-size: 42px;
+  padding-top: 15px;
+  }
+  header div a {
+      margin: 7px 16px;
+      text-align: center;
+      font-size: 25px;
+      
+  }}
+  @media only screen and (min-width: 300px) and (max-width: 570px) {
+  .section1{
+    display: inline;
+   
+   }
+   .section1 img{
+    width: 100%;
+    min-width: 230px;
+    margin-left: 20px;
+    margin-top: 0px;
+   }
+   .prev , .next{
+    top:90%;
+    margin-top: -10px;
+    padding: 23px;
+    margin-left: 27px;
+   }
+   .prev:hover , .next:hover{
+    background-color: transparent;
+   }
+   .left{
+    margin-left: 0px;
+    width: 100%;
+   }
+   .left p{
+font-size: 20px;
+   }
+   .div2{
+    width: 100%;
+   }
+   .word{
+    display: none;
+   }
+   .rating{
+    font-size: 28px;
+   }
+   .div2{
+    width: 274px;
+   }
+   .div2 h1{
+    font-size: 40px;
+    width: 100%;
+   }
+   span h6{
+    margin-left: 0px;
+   }
+   .safe{
+    margin-left: 0px;
+    width: 80px;
+   }
+   .visa{
+    width: 40px !important;
+    margin-left: 0px;
+   }
+   .car img{
+    display: none;
+   }
+   .car{
+    width: 200px;
+   }
+   .car p{
+    margin-top: 10px;
+    margin-left: 10px;
+   }
+   .tabs{
+    display: none;
+   }
+   .info1, .info2, .info3, .info4{
+    display: none;
+  }
+  .write{
+    margin-top: 20px;
+    width: 200px;
+  }
+   .card{
+    width: 200px;
+   }
+ hr{
+  display: none;
+ }
+}
+
+ @media screen and (min-width: 571px) and (max-width: 991px) {
+  body {
+      font-size: 14px; 
+  }
+  header{
+      width: 100%;
+      height: 150px;
+  }
+  header div {
+      width: 500px;
+  }
+ .section1{
+  display: inline;
+ }
+ .section1 img{
+  width: 100%;
+  min-width: 508px;
+  margin-left: 20px;
+  margin-top: 0px;
+ }
+ .prev , .next{
+  top:90%;
+  margin-top: 10px;
+  padding: 23px;
+  margin-left: 100px;
+ }
+ .prev:hover , .next:hover{
+  background-color: transparent;
+ }
+ .card{
+  width: 500px;
+ }
+ .car{
+  min-width: 550px;
+  width: 70%;
+ }
+ .car img{
+  min-width: 50px;
+  width: 150px;
+ }
+ .div2 h1{
+  font-size: 40px;
+  width: 100%;
+  min-width: 400px;
+ }
+ .word{
+  min-width: 212px;
+ }
+.safe{
+  min-width: 350px;
+  margin-bottom: 15px;
+}
+ .point h6{
+  min-width: 102px;
+ }
+ .tabs, hr{
+  display: none;
+ }
+ .info1, .info2, .info3, .info4{
+  display: none;
+}
+.write{
+  margin-top: 10px;
+}}
+@media screen and (min-width: 992px) and (max-width: 1312px){
+  .section1{
+    display: flex;
+   }
+  .section1 img{
+    /* max-width: 440px; */
+    width: 88%;
+    margin-left: 30px;
+  }
+  .left{
+    margin-left: 0px;
+  }
+  .card{
+width: 400px;
+  }
+  .car img{
+    width: 20%;
+  }
+  .info1, .info2, .info3, .info4{
+    background-color: white;
+  }
+}
+
+
+@media screen and (min-width: 742px) and (max-width: 991px) {
+  header div {
+      width: 672px;
+  }
+ 
+}
+@media screen and (min-width: 850px) and (max-width: 991px) {
+ 
+  header p{
+      width: 470px;
+  }
+}

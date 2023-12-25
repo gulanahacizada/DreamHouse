@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="./contacts.css">
+</head>
+<body>
+    <header>
+        <p>Dream House</p>
+        <div>
+        <a href="./home.html" >Home</a>
+        <a href="./products.html" >Products</a>
+        <a href="./faq.html" >FAQ</a>
+        <a href="./blog.html" >Blog</a>
+        <a href="./contacts.html" >Contacts/Sign</a>
+        </div>
+    </header>
+    <main>
+        <section class="ready1">
+        <h1>We Ready To Help</h1>
+        <p>Please submit your inquiry using the form below. Be sure to provide as much information as possible so we can assist you quickly.</p>
+        </section>
+        <section class="information">
+        <div class="info">
+            <img src="./image/tel.PNG" alt="phone">
+            <div >
+                <h2>PHONE NUMBER</h2>
+                <h3>(62) 1829017</h3>
+            </div>
+        </div>
+        <div class="info">
+            <img src="./image/mail.PNG" alt="email">
+            <div >
+                <h2>EMAIL</h2>
+                <h3>hello@dream-house.com</h3>
+            </div>
+        </div>
+        <div class="info">
+            <img src="./image/konum.PNG" alt="place">
+            <div>
+                <h2>MAP STREET</h2>
+                <h3>John Bucarest St. 199</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section   >
+        <h1 class="registr">Registr</h1>
+        <form class="firstform">
+        <label class="name" >Name:</label>
+        <input class="user" type="text" placeholder="Enter your name" required>
+        <label class="email">Email:</label>
+        <input class="emailInput" type="email" placeholder="Enter your email" required>
+        <label class="password">Password:</label>
+        <input class="passwordInput" placeholder="Enter your password" required minlength="8">
+        <br>
+        <input type="checkbox" id="check">
+        <label class="agree" for="check">I agree Terms the Privacy Policy</label>
+        <br>
+        <button class="registrbutton"><b>Registr</b></button>
+    </form>
+    </section>
+    <section class="ready1">
+        <h1>Let’s Talk With Us</h1>
+        <p>Our trained staff will normally respond to your request within 1 business day.</p>
+        </section>
+    <section>
+        <form class="secondform">
+        <label for="message">Message:</label>
+        <textarea id="message" cols="120" rows="10"></textarea>
+        </form>
+        <button class="send"><b>Send</b></button>
+    </section>
+    </main>
+    <script src="./contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+.information{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+.info{
+    display: flex;
+  width: 300px;
+}
+.info div{
+    margin-top: 17px;
+    margin-left: 5px;
+}
+.firstform{
+    margin-top: 20px;
+    margin: auto;
+    border: 5px solid #3a5041;
+    border-radius: 10px;
+    width: 50%;
+    height: 320px;
+    padding-top: 50px;
+}
+.firstform input{
+    width: 500px;
+    height: 35px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.firstform label{
+    font-size: 25px;
+    margin-left: 20px;
+    
+}
+#check{
+    width: 20px !important;
+}
+.name{
+    margin-right: 37px;
+}
+.email{
+    margin-right: 39px;
+}
+.agree{
+    font-size: 20px !important;
+    position: relative;
+    top: -11px;
+    left:-5px;
+}
+.firstform button{
+    width: 300px;
+    height: 50px;
+    position: relative;
+   left: 100px;
+   margin-left: 70px;
+   margin-top: 20px;
+   border: 2px solid #3a5041;
+   border-radius: 10px;
+   font-size: 25px;
+   color: #3a5041;
+}
+.registr{
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    color: #161616;
+    margin: auto ;
+    width: 140px;
+    margin-bottom: 25px;
+}
+.secondform{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+.secondform label{
+    font-size: 40px;
+}
+textarea{
+    /* width: 935px; */
+    width: 95%;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.send{
+    width: 200px;
+    height: 50px;
+    color: white;
+    background-color: #3a5041 ;
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 90px;
+    margin-bottom: 50px;
+}
+@media only screen and (min-width: 300px) and (max-width: 512px) {
+    body {
+        font-size: 14px;
+    }
+    header {
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        height: 180px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    header div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    header p{
+    font-size: 42px;
+    padding-top: 15px;
+    }
+    header div a {
+        margin: 10px 16px;
+        text-align: center;
+        font-size: 25px;
+        
+    }
+    .firstform{
+        min-height: 400px;
+        padding-left: 10px;
+    }
+    .firstform input{
+        width: 263px;
+        height: 35px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      border: 1px solid;
+    }
+    #check{
+        margin-left: 10px !important;
+        margin-right: 0px;
+    }
+    .firstform button{
+        width: 100px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    .information{
+        display: flex;
+        flex-direction: column;
+    }
+    .firstform{
+        width: 97%;
+        margin-left: 26px;
+    }
+    .info h2{
+        font-size: 20px;
+    }
+    .info h3{
+        font-size: 18px;
+    }
+    .info{
+margin-left: 10px;
+    }
+
+}
+@media only screen and (min-width: 427px) and (max-width: 512px){
+    .firstform{
+        min-height: 200px;
+        padding-left: 0px;
+
+    }
+    .firstform input{
+        width: 250px;
+        height: 35px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 513px) and (max-width: 991px) {
+    body {
+        font-size: 14px; 
+    }
+    header{
+        width: 100%;
+        height: 150px;
+    }
+    header div {
+        width: 500px;
+    }
+    .firstform{
+        width: 571px;
+        padding-left: 10px;
+        margin-left: 7%;
+    }
+    .firstform input{
+        width: 400px;
+        height: 35px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    input{
+        border: 1px solid;
+    }
+    textarea{
+        border: 1px solid;
+    }
+    .registr{
+        width: 10%;
+    }
+    .information{
+        display: flex;
+        flex-direction: column;
+    }
+    .info h2{
+        font-size: 25px;
+    }
+    .info h3{
+        font-size: 20px;
+    }
+    .info{
+        margin-left: 20px;
+            }
+   
+}
+@media screen and (min-width: 742px) and (max-width: 991px) {
+    header div {
+        width: 672px;
+    }
+    .information{
+        display: flex;
+        flex-direction: row;
+    }
+    .information img{
+        min-width: 80px;
+        min-height: 80px;
+    }
+   .registr{
+    margin-left: 100px;
+   }
+    .info h2{
+        font-size: 25px;
+    }
+    .info h3{
+        font-size: 20px;
+    }
+    .info{
+        margin-left: 20px;
+            }
+   
+}
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+    .firstform{
+        width: 750px;
+        height: 420px;
+        
+    }
+    .firstform input{
+        width: 640px;
+        height: 35px;
+    }
+}
+@media screen and (min-width: 850px) and (max-width: 991px) {
+   
+    header p{
+        width: 400px;
+    }
+}
