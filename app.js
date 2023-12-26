@@ -55,7 +55,7 @@ all.forEach((button) => {
 
     button.classList.add("clicked");
 
-
+    search.value=""
     category.forEach((c) => {
       if (button.innerText == c.innerText || button.innerText == "All") {
         c.parentElement.style.display = "inline";
