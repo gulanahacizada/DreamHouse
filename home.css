@@ -257,7 +257,7 @@ margin-bottom: 20px;
         width: 400px;
     }
 }
-@media screen and (min-width: 992px) and (max-width: 1400px) {
+@media screen and (min-width: 992px) and (max-width: 1440px) {
    
     .home-img{
         width: 98%;

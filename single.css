@@ -451,7 +451,7 @@ font-size: 20px;
 .write{
   margin-top: 10px;
 }}
-@media screen and (min-width: 992px) and (max-width: 1312px){
+@media screen and (min-width: 992px) and (max-width: 1440px){
   .section1{
     display: flex;
    }
