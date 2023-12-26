@@ -222,7 +222,7 @@ if(mark.innerHTML=="Nelson corner sofa"){
 }else if(mark.innerHTML=="Corner Sofa Hermes"){
     h1.innerText="Corner Sofa Hermes"
     rating.innerText="Rating:4"
-    price.innerText="$1128"
+    price.innerText="$1540"
     preprice.innerText="$2200"
     red.innerHTML="30% OFF"
     star.innerHTML="★★★★"

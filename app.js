@@ -54,7 +54,8 @@ all.forEach((button) => {
     });
 
     button.classList.add("clicked");
-
+    count1.checked = false;
+    count2.checked = false;
     search.value=""
     category.forEach((c) => {
       if (button.innerText == c.innerText || button.innerText == "All") {
@@ -70,7 +71,8 @@ all.forEach((button) => {
             let b = a.split("-")
             min.value = b[0]
             max.value = b[1]
-
+            count1.checked = false;
+            count2.checked = false;
             if ((parseFloat(price.innerText.replace("$", "")) > parseFloat(b[0])) && (parseFloat(price.innerText.replace("$", "")) < parseFloat(b[1]))) {
               c.parentElement.style.display = "inline"
       ///rating filtr
@@ -79,6 +81,8 @@ all.forEach((button) => {
                   r = price.parentElement.previousElementSibling.firstElementChild.innerText.substring(7, rating.length)
 
                   if ((span.classList.contains("rating-select")) == false) {
+                    count1.checked = false;
+                    count2.checked = false;
                     span.classList.add("rating-select")
                     if ((span.classList.contains("rating-select")) && (span.classList.contains("two"))) {
                       one.classList.add("rating-select")
@@ -125,7 +129,6 @@ all.forEach((button) => {
                       five.classList.remove("rating-select")
                     } else if (span.classList.contains("two")) {
                       five.classList.remove("rating-select")
-                      two.classList.remove("rating-select")
                       three.classList.remove("rating-select")
                       four.classList.remove("rating-select")
                     } else if (span.classList.contains("three")) {
@@ -167,6 +170,8 @@ all.forEach((button) => {
         })
         min.addEventListener("change", () => {
           max.addEventListener("change", () => {
+            count1.checked = false;
+            count2.checked = false;
             if ((parseFloat(price.innerText.replace("$", "")) > parseFloat(b[0])) && (parseFloat(price.innerText.replace("$", "")) < parseFloat(b[1]))) {
               c.parentElement.style.display = "inline"
             }
@@ -204,6 +209,17 @@ count2.addEventListener("change", () => {
 });
 
 function filterProducts() {
+  spans.forEach((span) => {
+    span.classList.remove("rating-select")
+  })
+  max.value = ""
+  min.value = ""
+  inps.forEach((inp) => {
+    inp.checked = false;
+  })
+  all.forEach((all) => {
+    all.classList.remove("clicked");
+  });
   let selectedColor = count1.checked ? "red" : "";
   productContainers.forEach((container) => {
     let price = container.querySelector(".price");

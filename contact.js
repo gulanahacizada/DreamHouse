@@ -9,17 +9,19 @@ registr.addEventListener("click",(e)=>{
     e.preventDefault()
     if((name.value.trim()!=="")&&
     (email.value.trim()!=="")&&
-    (password.value.trim()!=="")){
-    alert("Registration is successful")}
+    (password.value.trim()!=="")&&
+    (check.checked ==true)){
+    alert("Registration is successful")
     localStorage.setItem("user",`${name.value}`)
     name.value=""
     email.value=""
     password.value=""
-    check.checked = false;
+    check.checked = false;}
+    send.addEventListener("click",()=>{
+        if(text.value.trim()!=""){
+        alert("Message saved")}
+        text.value=""
+    })
 })
-send.addEventListener("click",()=>{
-    if(text.value.trim()!=""){
-    alert("Message saved")}
-    text.value=""
-})
+
 

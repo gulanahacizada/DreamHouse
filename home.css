@@ -257,7 +257,7 @@ margin-bottom: 20px;
         width: 400px;
     }
 }
-@media screen and (min-width: 991px) and (max-width: 1400px) {
+@media screen and (min-width: 992px) and (max-width: 1400px) {
    
     .home-img{
         width: 98%;
@@ -289,6 +289,10 @@ margin-bottom: 20px;
         color: white;
         font-size: 20px;
         line-height: 50px;
+    }
+    .icon h2{
+        width: 220px;
+        font-size: 20px;
     }
 }
 @media screen and (min-width: 1150px) and (max-width: 1400px){
