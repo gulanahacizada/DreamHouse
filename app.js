@@ -57,6 +57,11 @@ all.forEach((button) => {
     count1.checked = false;
     count2.checked = false;
     search.value=""
+    max.value = ""
+    min.value = ""
+    inps.forEach((inp) => {
+      inp.checked = false;
+    })
     category.forEach((c) => {
       if (button.innerText == c.innerText || button.innerText == "All") {
         c.parentElement.style.display = "inline";
