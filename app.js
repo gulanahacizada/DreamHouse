@@ -67,6 +67,9 @@ all.forEach((button) => {
 
         inps.forEach((inp) => {
           inp.addEventListener("change", (e) => {
+            spans.forEach((span) => {
+              span.classList.remove("rating-select")
+            })
             let a = e.target.nextElementSibling.innerText;
             let b = a.split("-")
             min.value = b[0]
@@ -170,6 +173,9 @@ all.forEach((button) => {
         })
         min.addEventListener("change", () => {
           max.addEventListener("change", () => {
+            spans.forEach((span) => {
+              span.classList.remove("rating-select")
+            })
             count1.checked = false;
             count2.checked = false;
             if ((parseFloat(price.innerText.replace("$", "")) > parseFloat(b[0])) && (parseFloat(price.innerText.replace("$", "")) < parseFloat(b[1]))) {
